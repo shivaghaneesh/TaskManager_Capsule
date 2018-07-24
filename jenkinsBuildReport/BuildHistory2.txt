@@ -1,0 +1,132 @@
+Started by user admin
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\TaskManager
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/sriyazudeen/TaskManager.git # timeout=10
+Fetching upstream changes from https://github.com/sriyazudeen/TaskManager.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --progress https://github.com/sriyazudeen/TaskManager.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 24e1abd9b88e07c523b248fbd5e6b6588ae089f2 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 24e1abd9b88e07c523b248fbd5e6b6588ae089f2
+Commit message: "Add project files."
+ > git.exe rev-list --no-walk 24e1abd9b88e07c523b248fbd5e6b6588ae089f2 # timeout=10
+[TaskManager] $ cmd /c call C:\WINDOWS\TEMP\jenkins647360396854984186.bat
+
+C:\Program Files (x86)\Jenkins\workspace\TaskManager>c:\nuget\nuget.exe restore TaskManager.sln 
+MSBuild auto-detection: using msbuild version '15.7.179.6572' from 'C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\bin'.
+All packages listed in packages.config are already installed.
+
+C:\Program Files (x86)\Jenkins\workspace\TaskManager>exit 0 
+Path To MSBuild.exe: C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild.exe
+Executing the command cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild.exe" TaskManager.sln " && exit %%ERRORLEVEL%% from C:\Program Files (x86)\Jenkins\workspace\TaskManager
+[TaskManager] $ cmd.exe /C " chcp 1252 & "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild.exe" TaskManager.sln " && exit %%ERRORLEVEL%%
+Active code page: 1252
+Microsoft (R) Build Engine version 15.1.548.43366
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+Build started 09-07-2018 14:59:24.
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|Any CPU".
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.BusinessLayer\TaskManager.BusinessLayer.csproj" (2) on node 1 (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.BusinessLayer\TaskManager.BusinessLayer.csproj" (2) is building "C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.DataLayer\TaskManager.DataLayer.csproj" (3:2) on node 1 (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.DataLayer\TaskManager.DataLayer.csproj" (3:2) is building "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Entities\TaskManager.Entities.csproj" (4:3) on node 1 (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  TaskManager.Entities -> C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Entities\bin\Debug\TaskManager.Entities.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Entities\TaskManager.Entities.csproj" (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  TaskManager.DataLayer -> C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.DataLayer\bin\Debug\Taskmanager.DataLayer.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.DataLayer\TaskManager.DataLayer.csproj" (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  TaskManager.BusinessLayer -> C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.BusinessLayer\bin\Debug\Taskmanager.BusinessLayer.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\Taskmanager.BusinessLayer\TaskManager.BusinessLayer.csproj" (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Test\TaskManager.Test.csproj" (5) on node 1 (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Test\TaskManager.Test.csproj" (5) is building "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManagerAPI\TaskManagerAPI.csproj" (6:2) on node 1 (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  TaskManagerAPI -> C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManagerAPI\bin\TaskManagerAPI.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManagerAPI\TaskManagerAPI.csproj" (default targets).
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyOutOfDateSourceItemsToOutputDirectory:
+Skipping target "_CopyOutOfDateSourceItemsToOutputDirectory" because all output files are up-to-date with respect to the input files.
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  TaskManager.Test -> C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Test\bin\Debug\TaskManager.Test.dll
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.Test\TaskManager.Test.csproj" (default targets).
+Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.sln" (1) is building "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\InitialDataLoadingConsolApp.csproj" (7) on node 1 (default targets).
+GenerateBindingRedirects:
+  No suggested binding redirects from ResolveAssemblyReferences.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+CoreCompile:
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+_CopyAppConfigFile:
+Skipping target "_CopyAppConfigFile" because all output files are up-to-date with respect to the input files.
+CopyFilesToOutputDirectory:
+  InitialDataLoadingConsolApp -> C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+PostBuildEvent:
+  
+      if not exist "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\x86" md "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\x86"
+      xcopy /s /y "C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\x86"
+      if not exist "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\amd64" md "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\amd64"
+      xcopy /s /y "C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\bin\Debug\amd64"
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceca40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlcecompact40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceer40EN.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceme40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlceqp40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\sqlcese40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\Microsoft.VC90.CRT\msvcr90.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\Microsoft.VC90.CRT\README_ENU.txt
+  9 File(s) copied
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceca40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlcecompact40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceer40EN.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceme40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlceqp40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\sqlcese40.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\Microsoft.VC90.CRT\msvcr90.dll
+  C:\Program Files (x86)\Jenkins\workspace\TaskManager\packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\Microsoft.VC90.CRT\README_ENU.txt
+  9 File(s) copied
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\ConsoleApp1\InitialDataLoadingConsolApp.csproj" (default targets).
+Done Building Project "C:\Program Files (x86)\Jenkins\workspace\TaskManager\TaskManager.sln" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.58
+Finished: SUCCESS
